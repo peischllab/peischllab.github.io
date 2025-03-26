@@ -3105,3 +3105,13 @@ input, select, textarea {
 			}
 
 	}
+
+/* Responsive Image */
+
+.responsive-image {
+    max-width: 600px; /* Limit the maximum width to 600px */
+    width: 100%; /* Ensure responsiveness */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the image */
+    display: block; /* Ensure proper alignment */
+}
