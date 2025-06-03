@@ -1743,7 +1743,7 @@ input, select, textarea {
 		}
 
 		.image:before {
-			content: '';
+			content: none !important;
 			position: absolute;
 			left: 0;
 			top: 0;
