@@ -1,6 +1,6 @@
 # ComBi Lab Website
 
-Welcome to the official website of **ComBi** (Computational Biology), part of the **Interfaculty Bioinformatics Unit (IBU)** at the **University of Bern**.
+Welcome to the GitHub repo for official website of **ComBi** (Computational Biology), part of the **Interfaculty Bioinformatics Unit (IBU)** at the **University of Bern**.
 
 Our research focuses on the development of mathematical models and computational tools to study the evolution of biological systems. In addition to our research activities, we contribute to the academic curriculum by organizing and teaching several courses in the **Master’s Program in Bioinformatics and Computational Biology** at the University of Bern.
 
