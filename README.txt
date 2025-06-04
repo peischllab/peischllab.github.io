@@ -1,31 +1,43 @@
-TXT by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+# ComBi Lab Website
 
+Welcome to the official website of **ComBi** (Computational Biology), part of the **Interfaculty Bioinformatics Unit (IBU)** at the **University of Bern**.
 
-A new, fully responsive portfolio/business style website template. I've been experimenting
-with minimalist styles lately and this design is one of many in the works that exemplifies
-this new direction. Hope you enjoy it.
+Our research focuses on the development of mathematical models and computational tools to study the evolution of biological systems. In addition to our research activities, we contribute to the academic curriculum by organizing and teaching several courses in the **Master’s Program in Bioinformatics and Computational Biology** at the University of Bern.
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+---
 
-(* = Not included)
+## Website Information
 
-Feedback, bug reports, and comments are not only welcome, but strongly encouraged :)
+This website is built using the **TXT** template by [HTML5 UP](https://html5up.net/txt).
 
-AJ
-aj@lkn.io | @ajlkn
+We use this platform to share:
 
+- Research updates  
+- Upcoming events and seminars  
+- Educational resources  
+- Team information  
 
-Credits:
+---
 
-	Demo Images:
-		Unsplash (unsplash.com)
+## Credits
 
-	Icons:
-		Font Awesome (fontawesome.io)
+**Template**  
+- [TXT by HTML5 UP](https://html5up.net/txt)  
+- Free for personal and commercial use under the [Creative Commons Attribution 3.0 License](https://html5up.net/license)  
+- Created by [@ajlkn](https://twitter.com/ajlkn)
 
-	Other:
-		jQuery (jquery.com)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+**Images**  
+- Background image used in the template: [Unsplash](https://unsplash.com)
+
+**Icons**  
+- [Font Awesome](https://fontawesome.com)
+
+**Libraries and Tools**  
+- [jQuery](https://jquery.com)  
+- [Responsive Tools by @ajlkn](https://github.com/ajlkn/responsive-tools)
+
+---
+
+## Contact
+
+For more about our research or collaborations, visit our site!
