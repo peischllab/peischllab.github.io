@@ -10,6 +10,47 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<!-- Small custom tweaks to space out the news items -->
+		<style>
+			/* container that holds the two columns */
+			.features .features-grid {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 2rem;
+				justify-content: space-between;
+				align-items: stretch;
+			}
+
+			/* each column holds two features stacked vertically */
+			.features .feature-column {
+				flex: 0 0 48%;
+				display: flex;
+				flex-direction: column;
+				gap: 1.5rem;
+			}
+
+			/* let individual feature boxes stretch to even heights */
+			.features .feature-column .box.feature {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				flex: 1 1 auto;
+				padding-bottom: 1rem; /* a little breathing room */
+			}
+
+			.features .feature-column .box.feature .image.featured {
+				max-height: 220px;
+				overflow: hidden;
+			}
+
+			/* responsive: single column on narrower screens */
+			@media screen and (max-width: 980px) {
+				.features .feature-column {
+					flex: 0 0 100%;
+				}
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
@@ -46,43 +87,49 @@
 									<section class="box features">
 										<h2 class="major"><span>What's up?</span></h2>
 										<div>
-											<div class="row">
-												<div class="col-3 col-6-medium col-12-small">
+											<!--
+												2 column layout: left column = (top) Study, (bottom) FINTA
+															 right column = (top) Biology Day, (bottom) Teacher of the Year
+												This visually places newest at bottom-right, then bottom-left, then top-right, then top-left.
+											-->
+											<div class="features-grid">
 
-													<!-- MEEW Survey is up! -->
+												<!-- LEFT COLUMN: top-left (Study), bottom-left (FINTA) -->
+												<div class="feature-column">
+
+													<!-- MEEW Survey (top-left) -->
 														<section class="box feature">
 															<a href="MEEW.html" class="image featured"><img src="images/Hermina_research.gif" alt="Join our study on digital learning!" /></a>
 															<h3><a href="MEEW.html">We're running a study on digital learning!</a></h3>
 															<p>
-																We're running a study to understand whether interactive web apps make students better at applied mathematical modelling in ecology and evolution. We need lecturers to advertise our study to their bachelor students. <a href="MEEW.html">Click here to learn more and take part in our study!</a>
+																We're running a study to understand whether interactive web apps make students better at applied mathematical modelling in ecology and evolution. We need lecturers to advertise our stu[...]
 															</p>
 														</section>
 
-													<!-- Biology Day 2025 -->
-														<section class="box feature">
-															<a href="#" class="image featured"><img src="images/Biology_day_2025.jpg" alt="Biology Day 2025" /></a>
-															<h3><a href="#">Biology Day 2025</a></h3>
-															<p>
-																The 12th Biology Day is coming up soon! We're looking for entertaining, 7-minute scientific presentations (not conference style) that highlight some of the latest research from across the Biology Department. If you'd like to present, please contact <a href="mailto:karolina.wachala@unibe.ch">Karolina Wąchała</a>.
-															</p>
-														</section>
-
-												</div>
-												<div class="col-3 col-6-medium col-12-small">
-
-													<!-- FINTA pride event 2025 -->
+													<!-- FINTA pride event 2025 (bottom-left) -->
 														<section class="box feature">
 															<a href="https://fintagroupbiounibe.wordpress.com/about/" class="image featured"><img src="images/FINTA_pride_2025.jpg" alt="FINTA Pride Month talk announcement" /></a>
 															<h3><a href="https://fintagroupbiounibe.wordpress.com/about/">FINTA Pride Month 2025 talk</a></h3>
 															<p>
-																In celebration of Pride Month, the <a href="https://fintagroupbiounibe.wordpress.com/about/">FINTA</a> group is excited to announce an upcoming talk by Dr. Camille Thomas-Bulle, on <i>Challenging patriarchal norms in the study of sex and selection</i>. Mark your calendars!
+																In celebration of Pride Month, the <a href="https://fintagroupbiounibe.wordpress.com/about/">FINTA</a> group is excited to announce an upcoming talk by Dr. Camille Thomas-Bulle, on <i>[...]
 															</p>
 														</section>
 
 												</div>
-												<div class="col-3 col-6-medium col-12-small">
 
-													<!-- Teacher of the year -->
+												<!-- RIGHT COLUMN: top-right (Biology Day), bottom-right (Teacher of the Year) -->
+												<div class="feature-column">
+
+													<!-- Biology Day 2025 (top-right) -->
+														<section class="box feature">
+															<a href="#" class="image featured"><img src="images/Biology_day_2025.jpg" alt="Biology Day 2025" /></a>
+															<h3><a href="#">Biology Day 2025</a></h3>
+															<p>
+																The 12th Biology Day is coming up soon! We're looking for entertaining, 7-minute scientific presentations (not conference style) that highlight some of the latest research from across [...]
+															</p>
+														</section>
+
+													<!-- Teacher of the year (bottom-right) -->
 														<section class="box feature">
 															<img src="images/TeacherYear2024.jpeg" alt="Teacher of the Year" class="image featured"/>
 															<h3>Stephan Peischl is awarded Teacher of the Year, 2023-2024.</h3>
@@ -92,6 +139,7 @@
 														</section>
 
 												</div>
+
 											</div>
 										</div>
 									</section>
@@ -133,6 +181,3 @@
 
 	</body>
 </html>
-</html>
-
-
