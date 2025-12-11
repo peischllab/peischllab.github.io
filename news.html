@@ -11,43 +11,78 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 
-		<!-- Small custom tweaks to space out the news items -->
+		<!-- Grid layout for News: 3 columns, explicit placement (Option A) -->
 		<style>
-			/* container that holds the two columns */
+			/* Grid that fills the width under "What's up?" */
 			.features .features-grid {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 2rem;
-				justify-content: space-between;
-				align-items: stretch;
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				grid-auto-rows: minmax(180px, auto);
+				gap: 2rem 2.5rem;
+				align-items: start;
+				margin-top: 1.5rem;
 			}
 
-			/* each column holds two features stacked vertically */
-			.features .feature-column {
-				flex: 0 0 48%;
-				display: flex;
-				flex-direction: column;
-				gap: 1.5rem;
-			}
+			/* Explicit placement for Option A:
+			   - top row: [ col1 empty ][ col2 empty ][ col3 Study (oldest) ]
+			   - bottom row: [ col1 Biology ][ col2 FINTA ][ col3 Teacher (newest) ]
+			*/
+			.features .item-study   { grid-column: 3 / 4; grid-row: 1 / 2; }
+			.features .item-biology { grid-column: 1 / 2; grid-row: 2 / 3; }
+			.features .item-finta   { grid-column: 2 / 3; grid-row: 2 / 3; }
+			.features .item-teacher { grid-column: 3 / 4; grid-row: 2 / 3; }
 
-			/* let individual feature boxes stretch to even heights */
-			.features .feature-column .box.feature {
+			/* Make each feature box stretch and have consistent spacing */
+			.features .box.feature {
 				display: flex;
 				flex-direction: column;
 				justify-content: flex-start;
-				flex: 1 1 auto;
-				padding-bottom: 1rem; /* a little breathing room */
+				align-items: stretch;
+				padding: 1rem;
+				min-height: 160px;
+				background: transparent; /* keep theme default; override if you prefer a card look */
 			}
 
-			.features .feature-column .box.feature .image.featured {
-				max-height: 220px;
-				overflow: hidden;
+			.features .box.feature .image.featured {
+				display: block;
+				margin: 0 auto 0.8rem;
+				max-width: 100%;
+				height: auto;
+				object-fit: cover;
+				border-radius: 2px;
 			}
 
-			/* responsive: single column on narrower screens */
+			.features .box.feature h3 {
+				margin: 0.25rem 0 0.6rem;
+				font-size: 1rem;
+			}
+
+			.features .box.feature p {
+				margin: 0;
+				font-size: 0.9rem;
+				color: #666;
+			}
+
+			/* Responsive: collapse to single column on small screens */
 			@media screen and (max-width: 980px) {
-				.features .feature-column {
-					flex: 0 0 100%;
+				.features .features-grid {
+					grid-template-columns: 1fr;
+					gap: 1.25rem;
+				}
+				/* allow natural flow on narrow screens */
+				.features .item-study,
+				.features .item-biology,
+				.features .item-finta,
+				.features .item-teacher {
+					grid-column: auto;
+					grid-row: auto;
+				}
+			}
+
+			/* Slightly larger spacing on very wide screens */
+			@media screen and (min-width: 1400px) {
+				.features .features-grid {
+					gap: 3rem 3.5rem;
 				}
 			}
 		</style>
@@ -87,58 +122,48 @@
 									<section class="box features">
 										<h2 class="major"><span>What's up?</span></h2>
 										<div>
-											<!--
-												2 column layout: left column = (top) Study, (bottom) FINTA
-															 right column = (top) Biology Day, (bottom) Teacher of the Year
-												This visually places newest at bottom-right, then bottom-left, then top-right, then top-left.
-											-->
+											<!-- 3-column grid with explicit placement (Option A) -->
 											<div class="features-grid">
 
-												<!-- LEFT COLUMN: top-left (Study), bottom-left (FINTA) -->
-												<div class="feature-column">
+												<!-- (top row col1) intentionally left empty -->
 
-													<!-- MEEW Survey (top-left) -->
-														<section class="box feature">
-															<a href="MEEW.html" class="image featured"><img src="images/Hermina_research.gif" alt="Join our study on digital learning!" /></a>
-															<h3><a href="MEEW.html">We're running a study on digital learning!</a></h3>
-															<p>
-																We're running a study to understand whether interactive web apps make students better at applied mathematical modelling in ecology and evolution. We need lecturers to advertise our stu[...]
-															</p>
-														</section>
+												<!-- (top row col2) intentionally left empty -->
 
-													<!-- FINTA pride event 2025 (bottom-left) -->
-														<section class="box feature">
-															<a href="https://fintagroupbiounibe.wordpress.com/about/" class="image featured"><img src="images/FINTA_pride_2025.jpg" alt="FINTA Pride Month talk announcement" /></a>
-															<h3><a href="https://fintagroupbiounibe.wordpress.com/about/">FINTA Pride Month 2025 talk</a></h3>
-															<p>
-																In celebration of Pride Month, the <a href="https://fintagroupbiounibe.wordpress.com/about/">FINTA</a> group is excited to announce an upcoming talk by Dr. Camille Thomas-Bulle, on <i>[...]
-															</p>
-														</section>
+												<!-- top-right (Study) = oldest -->
+												<section class="box feature item-study">
+													<a href="MEEW.html" class="image featured"><img src="images/Hermina_research.gif" alt="Join our study on digital learning!" /></a>
+													<h3><a href="MEEW.html">We're running a study on digital learning!</a></h3>
+													<p>
+														We're running a study to understand whether interactive web apps make students better at applied mathematical modelling in ecology and evolution. We need lecturers to advertise our stu[...]
+													</p>
+												</section>
 
-												</div>
+												<!-- bottom-left (Biology) -->
+												<section class="box feature item-biology">
+													<a href="#" class="image featured"><img src="images/Biology_day_2025.jpg" alt="Biology Day 2025" /></a>
+													<h3><a href="#">Biology Day 2025</a></h3>
+													<p>
+														The 12th Biology Day is coming up soon! We're looking for entertaining, 7-minute scientific presentations (not conference style) that highlight some of the latest research from across [...]
+													</p>
+												</section>
 
-												<!-- RIGHT COLUMN: top-right (Biology Day), bottom-right (Teacher of the Year) -->
-												<div class="feature-column">
+												<!-- bottom-middle (FINTA) -->
+												<section class="box feature item-finta">
+													<a href="https://fintagroupbiounibe.wordpress.com/about/" class="image featured"><img src="images/FINTA_pride_2025.jpg" alt="FINTA Pride Month talk announcement" /></a>
+													<h3><a href="https://fintagroupbiounibe.wordpress.com/about/">FINTA Pride Month 2025 talk</a></h3>
+													<p>
+														In celebration of Pride Month, the <a href="https://fintagroupbiounibe.wordpress.com/about/">FINTA</a> group is excited to announce an upcoming talk by Dr. Camille Thomas-Bulle, on <i>[...]
+													</p>
+												</section>
 
-													<!-- Biology Day 2025 (top-right) -->
-														<section class="box feature">
-															<a href="#" class="image featured"><img src="images/Biology_day_2025.jpg" alt="Biology Day 2025" /></a>
-															<h3><a href="#">Biology Day 2025</a></h3>
-															<p>
-																The 12th Biology Day is coming up soon! We're looking for entertaining, 7-minute scientific presentations (not conference style) that highlight some of the latest research from across [...]
-															</p>
-														</section>
-
-													<!-- Teacher of the year (bottom-right) -->
-														<section class="box feature">
-															<img src="images/TeacherYear2024.jpeg" alt="Teacher of the Year" class="image featured"/>
-															<h3>Stephan Peischl is awarded Teacher of the Year, 2023-2024.</h3>
-															<p>
-																We are thrilled to announce that Stephan Peischl has been recognized as Teacher of the Year for his outstanding contributions to education and mentorship.
-															</p>
-														</section>
-
-												</div>
+												<!-- bottom-right (Teacher of the Year) = newest -->
+												<section class="box feature item-teacher">
+													<img src="images/TeacherYear2024.jpeg" alt="Teacher of the Year" class="image featured"/>
+													<h3>Stephan Peischl is awarded Teacher of the Year, 2023-2024.</h3>
+													<p>
+														We are thrilled to announce that Stephan Peischl has been recognized as Teacher of the Year for his outstanding contributions to education and mentorship.
+													</p>
+												</section>
 
 											</div>
 										</div>
