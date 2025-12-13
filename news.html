@@ -15,7 +15,7 @@
 			.box.features .news-grid {
 				display: grid;
 				grid-template-columns: repeat(2, minmax(0, 1fr));
-				gap: 2rem;
+				gap: 2.5rem;
 				align-items: stretch;
 			}
 
@@ -27,26 +27,30 @@
 				background: #fff;
 			}
 
-			/* Taller image area with cover (minimal cropping) */
+			/* Uniform image area: equal size, no empty space (uses cropping) */
 			.box.features .feature .image.featured,
-			.box.features .feature .image.featured img,
-			.box.features .feature span.image.featured,
-			.box.features .feature span.image.featured img {
+			.box.features .feature span.image.featured {
 			  display: block;
 			  width: 100%;
-			  height: 600px;               
-			  object-fit: cover;
-			  object-position: center;
+			  aspect-ratio: 4 / 3;  /* standardize the image area */
+			  overflow: hidden;      /* hide overflow from cover scaling */
 			  border-radius: 0;
+			  background: #f5f5f5;   /* optional, helps during load */
+			}
+			.box.features .feature .image.featured img,
+			.box.features .feature span.image.featured img {
+			  width: 100%;
+			  height: 100%;
+			  object-fit: cover;      /* fill box; may crop edges */
+			  object-position: center;/* tweak per image if needed */
+			  border-radius: 0;
+			  display: block;
 			}
 			
 			/* Increase vertical spacing to match larger visuals */
 			.box.features .feature h3,
 			.box.features .feature p {
 			  padding: 0 1.25rem;
-			}
-			.box.features .news-grid {
-			  gap: 2.5rem;
 			}
 
 			.box.features .feature h3 {
@@ -118,7 +122,7 @@
 												</a>
 												<h3><a href="MEEW.html">We're running a study on digital learning!</a></h3>
 												<p>
-													We're running a study to understand whether interactive web apps make students better at applied mathematical modelling in ecology and evolution. We need lecturers to advertise our stu[...]
+													We're running a study to understand whether interactive web apps make students better at applied mathematical modelling in ecology and evolution. We need lecturers to advertise our stu[..[...]
 												</p>
 											</section>
 
@@ -129,7 +133,7 @@
 												</a>
 												<h3><a href="#">Biology Day 2025</a></h3>
 												<p>
-													The 12th Biology Day is coming up soon! We're looking for entertaining, 7-minute scientific presentations (not conference style) that highlight some of the latest research from across[...]
+													The 12th Biology Day is coming up soon! We're looking for entertaining, 7-minute scientific presentations (not conference style) that highlight some of the latest research from across[...[...]
 												</p>
 											</section>
 
@@ -140,7 +144,7 @@
 												</a>
 												<h3><a href="https://fintagroupbiounibe.wordpress.com/about/">FINTA Pride Month 2025 talk</a></h3>
 												<p>
-													In celebration of Pride Month, the <a href="https://fintagroupbiounibe.wordpress.com/about/">FINTA</a> group is excited to announce an upcoming talk by Dr. Camille Thomas-Bulle, on <i>[...]
+													In celebration of Pride Month, the <a href="https://fintagroupbiounibe.wordpress.com/about/">FINTA</a> group is excited to announce an upcoming talk by Dr. Camille Thomas-Bulle, on <i>[..[...]
 												</p>
 											</section>
 
@@ -196,11 +200,3 @@
 	</body>
 </html>
 </html>
-
-
-
-
-
-
-
-
