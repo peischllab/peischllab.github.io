@@ -27,24 +27,26 @@
 				background: #fff;
 			}
 
-			/* Normalize image area */
+			/* Taller image area with cover (minimal cropping) */
 			.box.features .feature .image.featured,
 			.box.features .feature .image.featured img,
 			.box.features .feature span.image.featured,
 			.box.features .feature span.image.featured img {
-				display: block;
-				width: 100%;
-				/* Fixed visual height with cover to unify appearance */
-				height: 260px;
-				object-fit: cover;
-				object-position: center;
-				border-radius: 0; /* match card edges */
+			  display: block;
+			  width: 100%;
+			  height: 340px;               /* increase from 260px to 340–380px */
+			  object-fit: cover;
+			  object-position: center;
+			  border-radius: 0;
 			}
-
-			/* Content spacing inside each item */
+			
+			/* Increase vertical spacing to match larger visuals */
 			.box.features .feature h3,
 			.box.features .feature p {
-				padding: 0 1rem;
+			  padding: 0 1.25rem;
+			}
+			.box.features .news-grid {
+			  gap: 2.5rem;
 			}
 
 			.box.features .feature h3 {
@@ -194,3 +196,4 @@
 	</body>
 </html>
 </html>
+
