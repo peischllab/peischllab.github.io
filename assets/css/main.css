@@ -3128,7 +3128,7 @@ input, select, textarea {
 /* On tablets and larger screens, make the group photo smaller */
 @media screen and (min-width: 737px) {
     #group-photo img {
-        max-width: 50%;
+        max-width: 80%;
         margin: 0 auto;
         display: block;
     }
@@ -3137,7 +3137,7 @@ input, select, textarea {
 /* On desktop screens, make it even smaller */
 @media screen and (min-width: 1025px) {
     #group-photo img {
-        max-width: 30%;
+        max-width: 70%;
 		margin: 0 auto; /* Center the image */
         display: block; /* Ensure proper alignment */
     }
