@@ -1,214 +1,125 @@
 <!DOCTYPE HTML>
 <!--
-	TXT by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    TXT by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>News - ComBi</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<style>
-			/* Layout fixes for news grid */
-			.box.features .news-grid {
-				display: grid;
-				grid-template-columns: repeat(2, minmax(0, 1fr));
-				gap: 2.5rem;
-				align-items: stretch;
-			}
+  <head>
+    <title>News - ComBi</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body class="is-preload">
+    <div id="page-wrapper">
 
-			/* Ensure each item takes the same amount of space */
-			.box.features .feature {
-				display: flex;
-				flex-direction: column;
-				height: 100%;
-				background: #fff;
-			}
+      <!-- Header -->
+      <header id="header">
+        <div class="logo container">
+          <div>
+            <h1><a href="index.html" id="logo">ComBi</a></h1>
+            <p>News</p>
+          </div>
+        </div>
+      </header>
 
-			/* Uniform image area: equal size, no empty space (uses cropping) */
-			.box.features .feature .image.featured,
-			.box.features .feature span.image.featured {
-			  display: block;
-			  width: 100%;
-			  aspect-ratio: 3 / 4;  /* standardize the image area */
-			  overflow: hidden;      /* hide overflow from cover scaling */
-			  border-radius: 0;
-			  background: #f5f5f5;   /* optional, helps during load */
-			}
-			.box.features .feature .image.featured img,
-			.box.features .feature span.image.featured img {
-			  width: 100%;
-			  height: 100%;
-			  object-fit: cover;      /* fill box; may crop edges */
-			  object-position: center;/* tweak per image if needed */
-			  border-radius: 0;
-			  display: block;
-			}
-			
-			/* Increase vertical spacing to match larger visuals */
-			.box.features .feature h3,
-			.box.features .feature p {
-			  padding: 0 1.25rem;
-			}
+      <!-- Nav -->
+      <nav id="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li class="current"><a href="news.html">News</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="teaching.html">Teaching</a></li>
+          <li><a href="labfun.html">Lab Fun</a></li>
+        </ul>
+      </nav>
 
-			.box.features .feature h3 {
-				margin-top: 1rem;
-				margin-bottom: 0.5rem;
-				line-height: 1.25;
-			}
+      <!-- Main -->
+      <section id="main">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
 
-			.box.features .feature p {
-				margin-bottom: 1rem;
-			}
+              <!-- Features -->
+              <section class="box features">
+                <h2 class="major"><span>What's up?</span></h2>
+                <div>
+                  <div class="row">
 
-			/* Ensure equal heights by letting content grow and fill */
-			.box.features .feature .image.featured,
-			.box.features .feature span.image.featured {
-				flex: 0 0 auto;
-			}
+                    <div class="col-3 col-6-medium col-12-small">
+                      <!-- Item 1 -->
+                      <section class="box feature">
+                        <a href="#" class="image featured"><img src="images/ComBi_outreach_2025.png" alt="ComBi outreach 2025" /></a>
+                        <h3><a href="#">ComBi scientific outreach in 2025</a></h3>
+                        <p>In 2025 ComBi had the opportunity to present at one national meeting and two international conferences. Until next year!</p>
+                      </section>
+                    </div>
 
-			/* Responsive: stack on small screens */
-			@media screen and (max-width: 980px) {
-				.box.features .news-grid {
-					grid-template-columns: 1fr;
-				}
-			}
-		</style>
-	</head>
-	<body class="is-preload">
-		<div id="page-wrapper">
+                    <div class="col-3 col-6-medium col-12-small">
+                      <!-- Item 2 -->
+                      <section class="box feature">
+                        <a href="MEEW.html" class="image featured"><img src="images/Hermina_research.gif" alt="Join our study on digital learning!" /></a>
+                        <h3><a href="MEEW.html">We're running a study on digital learning!</a></h3>
+                        <p>We're running a study to understand whether interactive web apps make students better at applied mathematical modelling in ecology and evolution. <a href="MEEW.html">Click here to learn more and take part.</a></p>
+                      </section>
+                    </div>
 
-			<!-- Header -->
-				<header id="header">
-					<div class="logo container">
-						<div>
-							<h1><a href="index.html" id="logo">ComBi</a></h1>
-							<p>News</p>
-						</div>
-					</div>
-				</header>
+                    <div class="col-3 col-6-medium col-12-small">
+                      <!-- Item 3 -->
+                      <section class="box feature">
+                        <a href="#" class="image featured"><img src="images/Biology_day_2025.jpg" alt="Biology Day 2025" /></a>
+                        <h3><a href="#">Biology Day 2025</a></h3>
+                        <p>The 12th Biology Day is coming up soon! We're looking for entertaining, 7-minute presentations. Contact <a href="mailto:karolina.wachala@unibe.ch">Karolina Wąchała</a>.</p>
+                      </section>
+                    </div>
 
-			<!-- Nav -->
-				<nav id="nav">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="people.html">People</a></li>
-						<li><a href="research.html">Research</a></li>
-						<li class="current"><a href="news.html">News</a></li>
-						<li><a href="publications.html">Publications</a></li>
-						<li><a href="teaching.html">Teaching</a></li>
-					<li><a href="labfun.html">Lab Fun</a></li>
+                    <div class="col-3 col-6-medium col-12-small">
+                      <!-- Item 4 -->
+                      <section class="box feature">
+                        <a href="https://fintagroupbiounibe.wordpress.com/about/" class="image featured"><img src="images/FINTA_pride_2025.jpg" alt="FINTA Pride Month talk announcement" /></a>
+                        <h3><a href="https://fintagroupbiounibe.wordpress.com/about/">FINTA Pride Month 2025 talk</a></h3>
+                        <p>In celebration of Pride Month, the FINTA group is excited to announce an upcoming talk by Dr. Camille Thomas-Bulle.</p>
+                      </section>
+                    </div>
 
-								<!-- Features -->
-									<section class="box features">
-										<h2 class="major"><span>What's up?</span></h2>
+                  </div>
+                </div>
+              </section>
 
-										<!-- Unified 2-column grid for all items -->
-										<div class="news-grid">
-											
-											<!-- Item 1 -->
-											<section class="box feature">
-												<a href="#" class="image featured">
-													<img src="images/ComBi_outreach_2025.png" alt="ComBi scientific outreach in 2025" />
-												</a>
-												<h3><a href="#">ComBi scientific outreach in 2025</a></h3>
-												<p>
-													In 2025 ComBi had the opportunity to present at one national meeting and two international conferences. Until next year!</a>
-												</p>
-											</section>
-											
-											<!-- Item 2 -->
-											<section class="box feature">
-												<a href="MEEW.html" class="image featured">
-													<img src="images/Hermina_research.gif" alt="Join our study on digital learning!" />
-												</a>
-												<h3><a href="MEEW.html">We're running a study on digital learning!</a></h3>
-												<p>
-													We're running a study to understand whether interactive web apps make students better at applied mathematical modelling in ecology and evolution. We need lecturers to advertise our study to their bachelor students. <a href="MEEW.html">Click here to learn more and take part in our study!</a>
-												</p>
-											</section>
+            </div>
+          </div>
+        </div>
+      </section>
 
-											<!-- Item 3 -->
-											<section class="box feature">
-												<a href="#" class="image featured">
-													<img src="images/Biology_day_2025.jpg" alt="Biology Day 2025" />
-												</a>
-												<h3><a href="#">Biology Day 2025</a></h3>
-												<p>
-													The 12th Biology Day is coming up soon! We're looking for entertaining, 7-minute scientific presentations (not conference style) that highlight some of the latest research from across the Biology Department. If you'd like to present, please contact <a href="mailto:karolina.wachala@unibe.ch">Karolina Wąchała</a>.
-												</p>
-											</section>
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="container">
+          <div class="row gtr-200">
+            <div class="col-12">
+              <!-- footer content -->
+            </div>
+          </div>
+          <div id="copyright">
+            <ul class="menu">
+              <li>Design: <a href="http://html5up.net">HTML5 UP</a> by <a href="http://twitter.com/ajlkn">AJ</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
 
-											<!-- Item 4 -->
-											<section class="box feature">
-												<a href="https://fintagroupbiounibe.wordpress.com/about/" class="image featured">
-													<img src="images/FINTA_pride_2025.jpg" alt="FINTA Pride Month talk announcement" />
-												</a>
-												<h3><a href="https://fintagroupbiounibe.wordpress.com/about/">FINTA Pride Month 2025 talk</a></h3>
-												<p>
-													In celebration of Pride Month, the <a href="https://fintagroupbiounibe.wordpress.com/about/">FINTA</a> group is excited to announce an upcoming talk by Dr. Camille Thomas-Bulle, on <i>Challenging patriarchal norms in the study of sex and selection</i>. Mark your calendars!
-												</p>
-											</section>
+    </div>
 
-											<!-- Item 5 -->
-											<section class="box feature">
-												<span class="image featured">
-													<img src="images/TeacherYear2024.jpeg" alt="Teacher of the Year" />
-												</span>
-												<h3><a href="#">Stephan Peischl is awarded Teacher of the Year, 2023-2024</a></h3>
-												<p>
-													We are thrilled to announce that Stephan Peischl has been recognized as Teacher of the Year for his outstanding contributions to education and mentorship.
-											</section>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 
-										</div>
-									</section>
-
-							</div>
-						</div>
-					</div>
-				</section>
-
-			<!-- Footer -->
-				<footer id="footer">
-					<div class="container">
-						<div class="row gtr-200">
-							<div class="col-12">
-								<!-- "What's this about?" section removed -->
-							</div>
-						</div>
-
-						<!-- Copyright -->
-							<div id="copyright">
-								<ul class="menu">
-									<li>Design: <a href="http://html5up.net">HTML5 UP</a> by <a href="http://twitter.com/ajlkn">AJ</a></li>
-								</ul>
-							</div>
-
-					</div>
-				</footer>
-
-		</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+  </body>
 </html>
-</html>
-
-
-
-
-
-
-
-
-
